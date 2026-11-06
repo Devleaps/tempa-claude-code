@@ -1,0 +1,21 @@
+{
+  "name": "devleaps",
+  "owner": {
+    "name": "Devleaps"
+  },
+  "metadata": {
+    "description": "Tempa for GitHub Copilot, from Devleaps: the Copilot plugin lives in Devleaps/tempa-copilot"
+  },
+  "plugins": [
+    {
+      "name": "tempa",
+      "source": {
+        "source": "github",
+        "repo": "Devleaps/tempa-copilot",
+        "ref": "main"
+      },
+      "description": "Tempa: your company's standards, skills, guardrails and shared context from your Tempa control plane",
+      "category": "productivity"
+    }
+  ]
+}
