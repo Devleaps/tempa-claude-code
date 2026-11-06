@@ -1,0 +1,13 @@
+{
+  "name": "tempa",
+  "displayName": "Devleaps Tempa",
+  "version": "0.1.4",
+  "description": "Devleaps standards, skills, guardrails and shared context in every Claude Code session. Carries the tempa CLI; log in with /tempa:login.",
+  "author": {
+    "name": "Devleaps"
+  },
+  "homepage": "https://github.com/Devleaps/tempa/blob/main/docs/install.md",
+  "repository": "https://github.com/Devleaps/tempa",
+  "license": "UNLICENSED",
+  "keywords": ["devleaps", "tempa", "guardrails", "standards"]
+}

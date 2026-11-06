@@ -1,0 +1,78 @@
+{
+  "description": "Tempa: every hook event goes to `tempa hook --harness claude-code` through the plugin's launcher. PreToolUse and UserPromptSubmit fail closed (onFailure block); see docs/hooks.md.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
+            "args": ["hook", "--harness", "claude-code"],
+            "timeout": 15
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
+            "args": ["hook", "--harness", "claude-code"],
+            "timeout": 5,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
+            "args": ["hook", "--harness", "claude-code"],
+            "timeout": 5,
+            "onFailure": "block"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
+            "args": ["hook", "--harness", "claude-code"],
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
+            "args": ["hook", "--harness", "claude-code"],
+            "timeout": 5
+          }
+        ]
+      }
+    ],
+    "SessionEnd": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
+            "args": ["hook", "--harness", "claude-code"]
+          }
+        ]
+      }
+    ]
+  }
+}
