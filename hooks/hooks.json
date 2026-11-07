@@ -1,5 +1,5 @@
 {
-  "description": "Tempa: every hook event goes to `tempa hook --harness claude-code` through the plugin's launcher. PreToolUse and UserPromptSubmit fail closed (onFailure block); see docs/hooks.md.",
+  "description": "Tempa: every hook event goes to `tempa hook --harness claude-code` through the plugin's launcher. PreToolUse and UserPromptSubmit fail closed (onFailure block); see https://tempa.devleaps.nl/docs/hooks.",
   "hooks": {
     "SessionStart": [
       {
