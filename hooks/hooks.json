@@ -1,13 +1,12 @@
 {
-  "description": "Tempa: every hook event goes to `tempa hook --harness claude-code` through the plugin's launcher. PreToolUse and UserPromptSubmit fail closed (onFailure block); see https://tempa.devleaps.nl/docs/hooks.",
+  "description": "Tempa: every hook event goes to `tempa hook --harness claude-code` through the plugin's launcher. PreToolUse and UserPromptSubmit fail closed (onFailure block); see https://tempa.devleaps.nl/docs/hooks. Shell form, not exec form: on Windows Claude Code runs it through Git Bash, while exec form cannot start the extensionless launcher there.",
   "hooks": {
     "SessionStart": [
       {
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
-            "args": ["hook", "--harness", "claude-code"],
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch\" hook --harness claude-code",
             "timeout": 15
           }
         ]
@@ -18,8 +17,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
-            "args": ["hook", "--harness", "claude-code"],
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch\" hook --harness claude-code",
             "timeout": 5,
             "onFailure": "block"
           }
@@ -31,8 +29,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
-            "args": ["hook", "--harness", "claude-code"],
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch\" hook --harness claude-code",
             "timeout": 5,
             "onFailure": "block"
           }
@@ -44,8 +41,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
-            "args": ["hook", "--harness", "claude-code"],
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch\" hook --harness claude-code",
             "timeout": 5
           }
         ]
@@ -56,8 +52,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
-            "args": ["hook", "--harness", "claude-code"],
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch\" hook --harness claude-code",
             "timeout": 5
           }
         ]
@@ -68,8 +63,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch",
-            "args": ["hook", "--harness", "claude-code"]
+            "command": "\"${CLAUDE_PLUGIN_ROOT}/bin/tempa-launch\" hook --harness claude-code"
           }
         ]
       }

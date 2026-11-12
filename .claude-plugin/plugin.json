@@ -1,7 +1,7 @@
 {
   "name": "tempa",
   "displayName": "Tempa",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Your company's standards, skills, guardrails and shared context from Tempa in every Claude Code session. Carries the tempa CLI; log in with /tempa:login.",
   "author": {
     "name": "Devleaps"
